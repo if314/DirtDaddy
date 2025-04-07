@@ -1,113 +1,693 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html class="no-js" lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dirt Daddy Dump Truck Attachment</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <style>
-        .bg-primary { background-color: #302D26; }
-        .text-primary { color: #302D26; }
-        .bg-accent { background-color: #CCFF7A; }
-        .text-accent { color: #CCFF7A; }
-        .bg-light-gray { background-color: #f0f0f0; }
-        .text-dark-gray { color: #202020; }
-        .bg-dark { background-color: #202020; }
-        .bg-black { background-color: #000000; }
-        .bg-custom-gray { background-color: #7EC4C6; }
-        .custom-gray { color: #7EC4C6; }
-        .text-3xlplus { font-size: 3.5rem; line-height: 4rem; }
-        .p-12 {
-    padding: 3rem;
-    margin: 1.5rem;
-}
-        @media (min-width: 768px) {
-            .text-3xlplus { font-size: 5.1rem; line-height: 6rem; }
-        }
-    </style>
+    <meta charset="utf-8">
+    
+    <!--====== Title ======-->
+    <title>Dirt Daddy</title>
+    
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--====== Favicon Icon ======-->
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/png">
+        
+    <!--====== Magnific Popup CSS ======-->
+    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+        
+    <!--====== Slick CSS ======-->
+    <link rel="stylesheet" href="assets/css/slick.css">
+        
+    <!--====== Font Awesome CSS ======-->
+    <link rel="stylesheet" href="assets/webfont/font-css/LineIcons.css">
+        
+    <!--====== Bootstrap CSS ======-->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    
+    <!--====== Default CSS ======-->
+    <link rel="stylesheet" href="assets/css/default.css">
+    
+    <!--====== Style CSS ======-->
+    <link rel="stylesheet" href="assets/css/style.css">
+    
 </head>
-<body class="bg-light-gray text-dark-gray">
 
-<header class="bg-primary py-8">
-    <div class="container mx-auto flex flex-wrap items-center justify-center md:justify-between">
-        <div class="w-full md:w-auto flex justify-center md:justify-start">
-            <img src="img/logoY.svg" alt="Dirt Daddy Logo" class="w-48 h-auto">
-        </div>
-    </div>
-</header>
+<body>
+    <!--[if IE]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+  <![endif]-->
+     
+    
+    <!--====== PRELOADER PART START ======-->
 
-<section class="py-12">
-    <div class="container mx-auto flex flex-col md:flex-row items-center">
-        <div class="md:w-1/2 p-6">
-            <p class="mb-12 font-black text-3xlplus text-center md:text-left">Transform any truck to a dump truck</p>
-            <ul class="list-disc pl-6 space-y-4 text-xl font-bold custom-gray">
-                <li>Easy Hitch Attachment</li>
-                <li>High Load Capacity</li>
-                <li>Durable Construction</li>
-            </ul>
-        </div>
-        <div class="md:w-1/2 p-6">
-            <img src="img/main.jpeg" alt="Dirt Daddy in Action" class="rounded-lg shadow-lg w-full">
-        </div>
-    </div>
-</section>
-
-<section class="py-12 bg-primary text-white">
-    <div class="container mx-auto text-center">
-        <h2 class="text-3xl font-bold mb-8">How It Works</h2>
-        <div class="grid gap-8 grid-cols-1 md:grid-cols-3">
-            <div class="bg-white text-dark-gray p-6 rounded-lg shadow-lg">
-                <img src="img/dirtdaddy/attach.png" class="w-full h-48 object-cover mb-4 rounded-md">
-                <h3 class="text-2xl font-bold mb-4 text-primary">Attach</h3>
-                <p>Easily secure the Dirt Daddy to your truck's hitch.</p>
-            </div>
-            <div class="bg-white text-dark-gray p-6 rounded-lg shadow-lg">
-                <img src="img/dirtdaddy/load.jpg" class="w-full h-48 object-cover mb-4 rounded-md">
-                <h3 class="text-2xl font-bold mb-4 text-primary">Load</h3>
-                <p>Fill with 2,000lbs of materials (light-duty), up to 6,000lbs (heavy-duty).</p>
-            </div>
-            <div class="bg-white text-dark-gray p-6 rounded-lg shadow-lg">
-                <img src="img/dirtdaddy/dump.png" class="w-full h-48 object-cover mb-4 rounded-md">
-                <h3 class="text-2xl font-bold mb-4 text-primary">Dump</h3>
-                <p>Use the hydraulic system to dump materials easily.</p>
+    <div class="preloader">
+        <div class="loader">
+            <div class="ytp-spinner">
+                <div class="ytp-spinner-container">
+                    <div class="ytp-spinner-rotator">
+                        <div class="ytp-spinner-left">
+                            <div class="ytp-spinner-circle"></div>
+                        </div>
+                        <div class="ytp-spinner-right">
+                            <div class="ytp-spinner-circle"></div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-</section>
 
-<section class="py-12">
-    <div class="container mx-auto text-center">
-        <h2 class="text-3xl font-bold mb-8">See Dirt Daddy in Action</h2>
-       
-        <iframe class="w-full rounded-lg shadow-lg"  width="100%" height="315" src="https://www.youtube.com/embed/5zqvyB4TQ-0?si=RZ9DCU3qoAOJ_65L" 
-        title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
-        encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-       
-    </div>
-</section>
+    <!--====== PRELOADER PART ENDS ======-->
 
-<section class="py-12 bg-primary text-white text-center">
-    <h2 class="text-3xl font-bold mb-8">Order Now</h2>
-    <div class="grid gap-8 grid-cols-1 md:grid-cols-2">
-        <div class="bg-accent p-12 rounded-lg text-primary">
-            <h3 class="text-2xl font-bold">Light Duty</h3>
-            <p class="mb-4">Dump up to 2000lb</p>
-            <p class="text-2xl font-bold mb-6">$699.99</p>
-            <a href="https://dirtdaddy.gumroad.com/l/lightduty" class="bg-primary text-white py-4 px-12 rounded-full hover:bg-accent transition">Buy Now</a>
+    <!--====== HEADER PART START ======-->
+
+    <section class="header_area">
+        <div class="header_navbar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                      <!--  <nav class="navbar navbar-expand-lg">
+                            <a class="navbar-brand" href="index.html">
+                                <img src="assets/images/logo.png" alt="Logo">
+                            </a>
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="toggler-icon"></span>
+                                <span class="toggler-icon"></span>
+                                <span class="toggler-icon"></span>
+                            </button>
+
+                            <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
+                                <ul id="nav" class="navbar-nav ml-auto">
+                                    <li class="nav-item active">
+                                        <a class="page-scroll" href="#home">Home</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="page-scroll" href="#features">Features</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="page-scroll" href="#about">About</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="page-scroll" href="#video">Tutorial</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="page-scroll" href="#gallery">Gallery</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="page-scroll" href="#contact">Contact</a>
+                                    </li>
+                                </ul>
+                            </div> 
+                        </nav> -->
+                    </div>
+                </div> <!-- row -->
+            </div> <!-- container -->
+        </div> <!-- header navbar -->
+
+        <div id="home" class="header_hero d-lg-flex align-items-center">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <div class="header_hero_content mt-45">
+                            <h2 class="header_title">Transform any truck to a dump truck
+                            </h2>
+                            <p>Unloading your truck, van, and trailer just got much easier. The Dirt Daddy allows any vehicle with a tow hitch attachment to auto-unload. 
+                            </p>
+                            <a href="#features" class="main-btn">Explore</a>
+                        </div> <!-- header hero content -->
+                    </div>
+                </div> <!-- row -->
+            </div> <!-- container -->
+            <div class="header_shape bg_cover d-none d-lg-block" style="background-image: url(assets/images/header_shape.png)"></div> <!-- header shape -->
+            <div class="header_image d-flex align-items-center">
+                <div class="image">
+                    <img src="assets/images/header_image.png" alt="header image">
+                    <img src="assets/images/dots.svg" alt="dots" class="dots">
+                </div> <!-- image -->
+            </div> <!-- header image -->
+        </div> <!-- header hero -->
+    </section>
+
+    <!--====== HEADER PART ENDS ======-->
+    
+    <!--====== FEATURES PART START ======-->
+
+    <section id="features" class="features_area pt-95">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6 col-md-9">
+                    <div class="section_title text-center pb-25">
+                        <h4 class="title">Features</h4>
+                        <p>2500 lb Load Capacity (4000 lb Load Capacity for Pro Model)
+                        </p>
+                    </div>
+                </div>
+            </div> <!-- row -->
+            <div class="row text-center">
+                <div class="col-lg-3 col-sm-6">
+                    <div class="single_features mt-30">
+                        <i class="lni lni-camera"></i>
+                        <h5 class="title">Easy hitch <br>attachment
+                        </h5>
+                     
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="single_features mt-30">
+                        <i class="lni lni-star"></i>
+                        <h5 class="title">All-steel <br>construction</h5>
+                      
+                    </div>
+                </div>
+              <div class="col-lg-3 col-sm-6">
+                    <div class="single_features mt-30">
+                        <i class="lni lni-game"></i>
+                        <h5 class="title">Remote control via two-way electric winch and relay
+                        </h5>
+                       
+                    </div>
+                </div>
+               <div class="col-lg-3 col-sm-6">
+                    <div class="single_features mt-30">
+                        <i class="lni lni-rocket"></i>
+                        <h5 class="title">American customer service</h5>
+                    </div> 
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
+    </section>
+
+    <!--====== FEATURES PART ENDS ======-->
+    
+    <!--====== ABOUT PART START ======-->
+
+    <section id="about" class="about_area pt-95">
+        <div class="about_shape d-none d-lg-block">
+            <img src="assets/images/about_shape.svg" alt="shape">
+        </div> <!-- about shape -->
+        <div class="about_image d-flex align-items-center align-items-center justify-content-end">
+            <div class="image">
+                <img src="assets/images/about.png" alt="about">
+            </div>
+        </div> <!-- about image -->
+        <div class="container">
+            <div class="row justify-content-end">
+                <div class="col-lg-6">
+                    <div class="about_content">
+                        <div class="section_title pb-25">
+                            <h4 class="title">Product Details
+                            </h4>
+                            <p>The Dirt Daddy is a brand new American invention. It lines the floor of your truck bed with a custom tarp and then pulls the tarp off the vehicle. Think of it as a massive paper towel roll that pulls your truck load off the truck bed. An electric winch powers the device. Suitable for gravel, debris, mulch, dirt, household dumps, etc. Suitable for automating city dump runs, DIY home improvement, or landscaping and gardening projects. Our rugged steel design and innovative simple design ensures the tool operates under the toughest conditions.</p>
+                        </div>
+                    </div> <!-- about content -->
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
+    </section>
+
+    <!--====== ABOUT PART ENDS ======-->
+    
+    <!--====== PRODUCT FEATURES PART START ======-->
+
+    <section id="product_features" class="product_features_area pt-95 ">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6 col-md-9">
+                    <div class="section_title text-center pb-25">
+                        <h4 class="title">Body Features</h4>
+                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr diam nonumy eirmod tempor invidunt labore dolore magna aliquyam.</p>
+                    </div>
+                </div>
+            </div> <!-- row -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="product_image mt-30">
+                        <img src="assets/images/product_features.png" alt="product features">
+                    </div> <!-- product image -->
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
+    </section>
+
+    <!--====== PRODUCT FEATURES PART ENDS ======-->
+    
+    <!--====== 
+
+    <section id="video" class="video_area">
+        <div class="video_shape">
+            <img src="assets/images/video_shape.svg" alt="Shape">
+        </div> 
+        
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6 col-md-9">
+                    <div class="section_title text-center pb-25">
+                        <h4 class="title">Getting Started Guide</h4>
+                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr diam nonumy eirmod tempor invidunt labore dolore magna aliquyam.</p>
+                    </div>
+                </div>
+            </div> 
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="video_image mt-30">
+                        <img src="assets/images/video_image.jpg" alt="video image">
+                        <a href="#" class="video_play video-popup"><i class="lni lni-play"></i></a>
+                    </div>
+                </div>
+            </div> 
+        </div> 
+    </section>
+
+  VIDEO PART ENDS ======-->
+    
+    <!--====== GALLERY PART START
+
+    <section id="gallery" class="gallery_area pt-95">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6 col-md-9">
+                    <div class="section_title text-center pb-55">
+                        <h4 class="title">Drone Gallery</h4>
+                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr diam nonumy eirmod tempor invidunt labore dolore magna aliquyam.</p>
+                    </div>
+                </div>
+            </div> 
+        </div> 
+        <div class="container-fluid">
+            <div class="row gallery_active">
+                <div class="col-lg-3">
+                    <div class="single_gallery text-center">
+                        <div class="gallery_sticker clearfix">
+                            <span class="discount">-30%</span>
+                        </div>
+                        <div class="gallery_image">
+                            <img src="assets/images/gallery-1.png" alt="gallery">
+                        </div>
+                        <div class="gallery_content">
+                            <ul>
+                                <li><i class="lni lni-star-filled"></i></li>
+                                <li><i class="lni lni-star-filled"></i></li>
+                                <li><i class="lni lni-star-filled"></i></li>
+                                <li><i class="lni lni-star-filled"></i></li>
+                                <li><i class="lni lni-star"></i></li>
+                            </ul>
+                            <h4 class="gallery_title"><a href="#">Drone Model S</a></h4>
+                            <div class="price">
+                                <span class="regular_price">$458.00</span>
+                                <span class="discount_price">$415.00</span>
+                            </div>
+                        </div>
+                        <div class="gallery_btn">
+                            <a class="main-btn" href="#">ADD TO CARD</a>
+                        </div>
+                    </div> 
+                </div>
+                <div class="col-lg-3">
+                    <div class="single_gallery text-center">
+                        <div class="gallery_sticker clearfix">
+                            <span class="new">New</span>
+                        </div>
+                        <div class="gallery_image">
+                            <img src="assets/images/gallery-2.png" alt="gallery">
+                        </div>
+                        <div class="gallery_content">
+                            <ul>
+                                <li><i class="lni lni-star-filled"></i></li>
+                                <li><i class="lni lni-star-filled"></i></li>
+                                <li><i class="lni lni-star-filled"></i></li>
+                                <li><i class="lni lni-star-filled"></i></li>
+                                <li><i class="lni lni-star"></i></li>
+                            </ul>
+                            <h4 class="gallery_title"><a href="#">Drone Model Cyber</a></h4>
+                            <div class="price">
+                                <span class="regular_price">$543.00</span>
+                                <span class="discount_price">$512.00</span>
+                            </div>
+                        </div>
+                        <div class="gallery_btn">
+                            <a class="main-btn" href="#">ADD TO CARD</a>
+                        </div>
+                    </div> 
+                </div>
+                <div class="col-lg-3">
+                    <div class="single_gallery text-center">
+                        <div class="gallery_sticker clearfix">
+                            <span class="discount">-30%</span>
+                        </div>
+                        <div class="gallery_image">
+                            <img src="assets/images/gallery-3.png" alt="gallery">
+                        </div>
+                        <div class="gallery_content">
+                            <ul>
+                                <li><i class="lni lni-star-filled"></i></li>
+                                <li><i class="lni lni-star-filled"></i></li>
+                                <li><i class="lni lni-star-filled"></i></li>
+                                <li><i class="lni lni-star-filled"></i></li>
+                                <li><i class="lni lni-star"></i></li>
+                            </ul>
+                            <h4 class="gallery_title"><a href="#">Drone Model Hexa</a></h4>
+                            <div class="price">
+                                <span class="regular_price">$965.00</span>
+                                <span class="discount_price">$635.00</span>
+                            </div>
+                        </div>
+                        <div class="gallery_btn">
+                            <a class="main-btn" href="#">ADD TO CARD</a>
+                        </div>
+                    </div> 
+                </div>
+                <div class="col-lg-3">
+                    <div class="single_gallery text-center">
+                        <div class="gallery_sticker clearfix">
+                            <span class="new">New</span>
+                        </div>
+                        <div class="gallery_image">
+                            <img src="assets/images/gallery-4.png" alt="gallery">
+                        </div>
+                        <div class="gallery_content">
+                            <ul>
+                                <li><i class="lni lni-star-filled"></i></li>
+                                <li><i class="lni lni-star-filled"></i></li>
+                                <li><i class="lni lni-star-filled"></i></li>
+                                <li><i class="lni lni-star-filled"></i></li>
+                                <li><i class="lni lni-star"></i></li>
+                            </ul>
+                            <h4 class="gallery_title"><a href="#">Drone Model Pure</a></h4>
+                            <div class="price">
+                                <span class="regular_price">$396.00</span>
+                                <span class="discount_price">$288.00</span>
+                            </div>
+                        </div>
+                        <div class="gallery_btn">
+                            <a class="main-btn" href="#">ADD TO CARD</a>
+                        </div>
+                    </div> 
+                </div>
+                <div class="col-lg-3">
+                    <div class="single_gallery text-center">
+                        <div class="gallery_sticker clearfix">
+                            <span class="discount">-30%</span>
+                        </div>
+                        <div class="gallery_image">
+                            <img src="assets/images/gallery-5.png" alt="gallery">
+                        </div>
+                        <div class="gallery_content">
+                            <ul>
+                                <li><i class="lni lni-star-filled"></i></li>
+                                <li><i class="lni lni-star-filled"></i></li>
+                                <li><i class="lni lni-star-filled"></i></li>
+                                <li><i class="lni lni-star-filled"></i></li>
+                                <li><i class="lni lni-star"></i></li>
+                            </ul>
+                            <h4 class="gallery_title"><a href="#">Drone Model Dream</a></h4>
+                            <div class="price">
+                                <span class="regular_price">$756.00</span>
+                                <span class="discount_price">$658.00</span>
+                            </div>
+                        </div>
+                        <div class="gallery_btn">
+                            <a class="main-btn" href="#">ADD TO CARD</a>
+                        </div>
+                    </div> 
+                </div>
+                <div class="col-lg-3">
+                    <div class="single_gallery text-center">
+                        <div class="gallery_sticker clearfix">
+                            <span class="new">New</span>
+                        </div>
+                        <div class="gallery_image">
+                            <img src="assets/images/gallery-3.png" alt="gallery">
+                        </div>
+                        <div class="gallery_content">
+                            <ul>
+                                <li><i class="lni lni-star-filled"></i></li>
+                                <li><i class="lni lni-star-filled"></i></li>
+                                <li><i class="lni lni-star-filled"></i></li>
+                                <li><i class="lni lni-star-filled"></i></li>
+                                <li><i class="lni lni-star"></i></li>
+                            </ul>
+                            <h4 class="gallery_title"><a href="#">Drone Exclusive Model Z</a></h4>
+                            <div class="price">
+                                <span class="regular_price">$458.00</span>
+                                <span class="discount_price">$366.00</span>
+                            </div>
+                        </div>
+                        <div class="gallery_btn">
+                            <a class="main-btn" href="#">ADD TO CARD</a>
+                        </div>
+                    </div> 
+                </div>
+            </div> 
+        </div> 
+    </section> ======-->
+
+    <!--====== GALLERY PART ENDS ======-->
+    
+    <!--====== CLIENT PART START ======-->
+
+     <!--====== CLIENT   <section id="client" class="client_area pt-95">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6 col-md-9">
+                    <div class="section_title text-center pb-55">
+                        <h4 class="title">Happy Customers</h4>
+                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr diam nonumy eirmod tempor invidunt labore dolore magna aliquyam.</p>
+                    </div>
+                </div>
+            </div> 
+            <div class="row client_active">
+                <div class="col-lg-4">
+                    <div class="single_client text-center">
+                        <div class="client_image">
+                            <img src="assets/images/author-1.png" alt="author">
+                        </div>
+                        <div class="client_content">
+                            <h4 class="author_name">Robert John</h4>
+                            <span>Youtuber</span>
+                            <p>Dsdipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore edolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores.</p>
+                        </div>
+                    </div> 
+                </div>
+                <div class="col-lg-4">
+                    <div class="single_client text-center">
+                        <div class="client_image">
+                            <img src="assets/images/author-2.png" alt="author">
+                        </div>
+                        <div class="client_content">
+                            <h4 class="author_name">Sophia Smiarthds</h4>
+                            <span>Creative Director</span>
+                            <p>Dsdipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore edolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores.</p>
+                        </div>
+                    </div> 
+                </div>
+                <div class="col-lg-4">
+                    <div class="single_client text-center">
+                        <div class="client_image">
+                            <img src="assets/images/author-3.png" alt="author">
+                        </div>
+                        <div class="client_content">
+                            <h4 class="author_name">John Doe</h4>
+                            <span>Gadget Reviewer</span>
+                            <p>Dsdipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore edolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores.</p>
+                        </div>
+                    </div> 
+                </div>
+                <div class="col-lg-4">
+                    <div class="single_client text-center">
+                        <div class="client_image">
+                            <img src="assets/images/author-4.jpg" alt="author">
+                        </div>
+                        <div class="client_content">
+                            <h4 class="author_name">Chris Dave</h4>
+                            <span>Film Maker</span>
+                            <p>Dsdipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore edolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores.</p>
+                        </div>
+                    </div> 
+                </div>
+            </div>
         </div>
-        <div class="bg-custom-gray p-12 rounded-lg text-primary">
-            <h3 class="text-2xl font-bold">Heavy Duty</h3>
-            <p class="mb-4">Dump up to 6000lb</p>
-            <p class="text-2xl font-bold mb-6">$999.99</p>
-            <a href="https://dirtdaddy.gumroad.com/l/heavyduty" class="bg-primary text-white py-4 px-12 rounded-full hover:bg-accent transition">Buy Now</a>
-        </div>
-    </div>
-</section>
+    </section>
 
-<footer class="py-12 bg-black text-white text-center">
-    <h2 class="text-3xl font-bold mb-4">Contact Us</h2>
-    <p>Email: <a href="mailto:dirtdaddyinc@gmail.com" class="text-accent">dirtdaddyinc@gmail.com</a></p>
-</footer>
+ PART ENDS ======-->
+    
+    <!--====== BLOG 
 
+    <section id="blog" class="blog_area pt-95 ">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6 col-md-9">
+                    <div class="section_title text-center pb-25">
+                        <h4 class="title">Special Purposes</h4>
+                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr diam nonumy eirmod tempor invidunt labore dolore magna aliquyam.</p>
+                    </div>
+                </div>
+            </div> 
+            <div class="row justify-content-center">
+                <div class="col-lg-4 col-md-7">
+                    <div class="single_blog mt-30">
+                        <div class="blog_image">
+                            <img src="assets/images/blog-1.jpg" alt="blog">
+                        </div>
+                        <div class="blog_content">
+                            <span class="number">01</span>
+                            <div class="main_content">
+                                <h4 class="blog_title"><a href="#">Film Making</a></h4>
+                                <p>Dsdipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore edolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam duo dolores.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-7">
+                    <div class="single_blog mt-30">
+                        <div class="blog_image">
+                            <img src="assets/images/blog-2.jpg" alt="blog">
+                        </div>
+                        <div class="blog_content">
+                            <span class="number">02</span>
+                            <div class="main_content">
+                                <h4 class="blog_title"><a href="#">Security</a></h4>
+                                <p>Dsdipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore edolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam duo dolores.</p>
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+                <div class="col-lg-4 col-md-7">
+                    <div class="single_blog mt-30">
+                        <div class="blog_image">
+                            <img src="assets/images/blog-3.jpg" alt="blog">
+                        </div>
+                        <div class="blog_content">
+                            <span class="number">03</span>
+                            <div class="main_content">
+                                <h4 class="blog_title"><a href="#">Entertainment</a></h4>
+                                <p>Dsdipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore edolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam duo dolores.</p>
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+            </div> 
+        </div> 
+    </section>PART START ======-->
+
+    <!--====== BLOG PART ENDS ======-->
+    
+    <!--====== CONTACT PART START ======-->
+
+    <section id="contact" class="contact_area pt-50">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="contact_info mt-45">
+                        <div class="section_title pb-15">
+                            <h4 class="title">Get In Touch</h4>
+                        </div>
+                   
+                        
+                        <div class="single_info d-flex align-items-center mt-15">
+                            <div class="info_icon">
+                                <i class="lni lni-envelope"></i>
+                            </div>
+                            <div class="info_content media-body">
+                                <p>bbdinnovations@gmail.com</p>
+                            </div>
+                        </div> <!-- single info -->
+                        
+                      <!-- single  <div class="single_info d-flex align-items-center mt-15">
+                            <div class="info_icon">
+                                <i class="lni lni-map-marker"></i>
+                            </div>
+                            <div class="info_content media-body">
+                                <p></p>
+                            </div>
+                        </div>  info -->
+                    </div> <!-- contact info -->
+                </div>
+               
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
+    </section>
+
+    <!--====== CONTACT PART ENDS ======-->
+    
+    <!--====== FOOTER 
+
+    <section id="footer" class="footer_area">
+        <div class="footer_widget pt-50 pb-100">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="footer_about mt-50">
+                            <a href="#">
+                                <img src="assets/images/logo.png" alt="logo">
+                            </a>
+                            <ul class="social">
+                                <li><a href="#"><i class="lni lni-facebook-filled"></i></a></li>
+                                <li><a href="#"><i class="lni lni-twitter-original"></i></a></li>
+                                <li><a href="#"><i class="lni lni-instagram-original"></i></a></li>
+                                <li><a href="#"><i class="lni lni-linkedin-original"></i></a></li>
+                            </ul>
+                        </div> 
+                    </div>
+                    <div class="col-lg-8">
+                        <div class="footer_link_wrapper d-flex flex-wrap">
+                       
+                         
+                        </div> 
+                    </div>
+                </div> 
+            </div> 
+        </div> PART START ======-->
+        
+        <div class="footer_copyright">
+            <div class="container">
+                <div class="copyright text-center">
+                    <p>Designed and Developed by <a href="https://uideck.com" rel="nofollow">UIdeck</a></p>
+                </div> <!-- copyright -->
+            </div> <!-- container -->
+        </div> <!-- footer copyright -->
+    </section>
+
+    <!--====== FOOTER PART ENDS ======-->
+    
+    <!--====== BACK TOP TOP PART START ======-->
+
+    <a href="#" class="back-to-top"><i class="lni lni-chevron-up"></i></a>
+
+    <!--====== BACK TOP TOP PART ENDS ======-->
+    
+
+
+    <!--====== PART ENDS ======-->
+    
+
+
+    <!--====== Jquery js ======-->
+    <script src="assets/js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="assets/js/vendor/modernizr-3.7.1.min.js"></script>
+    
+    <!--====== Bootstrap js ======-->
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    
+    <!--====== Slick js ======-->
+    <script src="assets/js/slick.min.js"></script>
+    
+    <!--====== Magnific Popup js ======-->
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    
+    <!--====== Ajax Contact js ======-->
+    <script src="assets/js/ajax-contact.js"></script>
+    
+    <!--====== Scrolling Nav js ======-->
+    <script src="assets/js/jquery.easing.min.js"></script>
+    <script src="assets/js/scrolling-nav.js"></script>
+    
+    <!--====== Main js ======-->
+    <script src="assets/js/main.js"></script>
+    
 </body>
+
 </html>
+
