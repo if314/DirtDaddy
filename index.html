@@ -1,136 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dirt Daddy Dump Truck Attachment</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <style>
-        .bg-primary { background-color: #302D26; }
-        .text-primary { color: #302D26; }
-        .bg-accent { background-color: #CCFF7A; }
-        .text-accent { color: #CCFF7A; }
-        .bg-light-gray { background-color: #f0f0f0; }
-        .text-dark-gray { color: #202020; }
-        .bg-dark { background-color: #202020; }
-        .bg-black { background-color: #000000; }
-        .bg-custom-gray { background-color: #09093d; }
-        .custom-gray { color: #09093d; }
-        .text-3xlplus { font-size: 3.5rem; line-height: 4rem; }
-        .p-12 {
-    padding: 3rem;
-    margin: 1.5rem;
-}
-        @media (min-width: 768px) {
-            .text-3xlplus { font-size: 5.1rem; line-height: 6rem; }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dirt Daddy Dump Truck Attachment</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    .bg-primary { background-color: #302D26; }
+    .text-primary { color: #302D26; }
+    .bg-accent { background-color: #CCFF7A; }
+    .text-accent { color: #CCFF7A; }
+    .bg-light-gray { background-color: #f0f0f0; }
+    .text-dark-gray { color: #202020; }
+    .bg-dark { background-color: #202020; }
+    .bg-black { background-color: #000000; }
+    .bg-custom-gray { background-color: #09093d; }
+    .custom-gray { color: #09093d; }
+    .text-3xlplus { font-size: 3.5rem; line-height: 4rem; }
+    .p-12 {
+      padding: 3rem;
+      margin: 1.5rem;
+    }
+    @media (min-width: 768px) {
+      .text-3xlplus { font-size: 5.1rem; line-height: 6rem; }
+    }
+    /* Smooth transition */
+    .transition-all {
+      transition: all 0.3s ease;
+    }
+  </style>
 </head>
-<body class="bg-light-gray text-dark-gray">
+<body class="bg-dark text-white">
 
-<header class="bg-primary py-8">
-    <div class="container mx-auto flex flex-wrap items-center justify-center md:justify-between">
-        <div class="w-full md:w-auto flex justify-center md:justify-start">
-            <img src="img/logoY.svg" alt="Dirt Daddy Logo" class="w-48 h-auto">
-        </div>
+<!-- Floating Header -->
+<header id="header" class="bg-primary fixed top-0 w-full z-50 py-6 transition-all shadow-lg">
+  <div class="container mx-auto flex flex-wrap items-center justify-between">
+    <div class="flex items-center space-x-6">
+      <img id="logo" src="img/logoY.svg" alt="Dirt Daddy Logo" class="w-32 h-auto transition-all">
     </div>
+    <div class="flex space-x-4">
+      <a href="mailto:bbdinnovation@gmail.com" class="bg-accent text-primary font-bold py-2 px-6 rounded-full hover:bg-white transition text-sm">Light Duty</a>
+      <a href="mailto:bbdinnovation@gmail.com" class="bg-custom-gray text-white font-bold py-2 px-6 rounded-full hover:bg-accent hover:text-primary transition text-sm">Heavy Duty</a>
+    </div>
+  </div>
 </header>
 
+<!-- Space to offset floating header -->
+<div class="h-24"></div>
+
 <section class="py-12">
-    <div class="container mx-auto flex flex-col md:flex-row items-center">
-        <div class="md:w-1/2 p-6">
-            <p class="mb-12 font-black text-3xlplus text-center md:text-left">Turn any truck into a dump truck</p>
-            <ul class="list-disc pl-6 space-y-4 text-xl font-bold custom-gray">
-                <li>Easy Hitch Attachment</li>
-                <li>High Load Capacity</li>
-                <li>Durable Construction</li>
-            </ul>
-        </div>
-        <div class="md:w-1/2 p-6">
-            <img src="img/main.jpeg" alt="Dirt Daddy in Action" class="rounded-lg shadow-lg w-full">
-        </div>
+  <div class="container mx-auto flex flex-col md:flex-row items-center">
+    <div class="md:w-1/2 p-6">
+      <p class="mb-12 font-black text-3xlplus text-center md:text-left">Turn any truck into a dump truck</p>
+      <ul class="list-disc pl-6 space-y-4 text-xl font-bold text-accent">
+        <li>Easy Hitch Attachment</li>
+        <li>High Load Capacity</li>
+        <li>Durable Construction</li>
+      </ul>
     </div>
+    <div class="md:w-1/2 p-6">
+      <img src="img/main.jpeg" alt="Dirt Daddy in Action" class="rounded-lg shadow-lg w-full">
+    </div>
+  </div>
 </section>
 
 <section class="py-12 bg-primary text-white">
-    <div class="container mx-auto text-center">
-        <h2 class="text-3xl font-bold mb-8">How It Works</h2>
-        <div class="grid gap-8 grid-cols-1 md:grid-cols-3">
-            <div class="bg-white text-dark-gray p-6 rounded-lg shadow-lg">
-                <img src="img/dirtdaddy/attach.png" class="w-full h-48 object-cover mb-4 rounded-md">
-                <h3 class="text-2xl font-bold mb-4 text-primary">Attach</h3>
-                <p>Easily secure the Dirt Daddy to your truck's hitch.</p>
-            </div>
-            <div class="bg-white text-dark-gray p-6 rounded-lg shadow-lg">
-                <img src="img/dirtdaddy/load.jpg" class="w-full h-48 object-cover mb-4 rounded-md">
-                <h3 class="text-2xl font-bold mb-4 text-primary">Load</h3>
-                <p>Fill with 2,000lbs of materials (light-duty), up to 6,000lbs (heavy-duty).</p>
-            </div>
-            <div class="bg-white text-dark-gray p-6 rounded-lg shadow-lg">
-                <img src="img/dirtdaddy/dump.png" class="w-full h-48 object-cover mb-4 rounded-md">
-                <h3 class="text-2xl font-bold mb-4 text-primary">Dump</h3>
-                <p>Use the hydraulic system to dump materials easily.</p>
-            </div>
-        </div>
+  <div class="container mx-auto text-center">
+    <h2 class="text-3xl font-bold mb-8">How It Works</h2>
+    <div class="grid gap-8 grid-cols-1 md:grid-cols-3">
+      <div class="bg-dark p-6 rounded-lg shadow-lg">
+        <img src="img/dirtdaddy/attach.png" class="w-full h-48 object-cover mb-4 rounded-md">
+        <h3 class="text-2xl font-bold mb-4 text-accent">Attach</h3>
+        <p>Easily secure the Dirt Daddy to your truck's hitch.</p>
+      </div>
+      <div class="bg-dark p-6 rounded-lg shadow-lg">
+        <img src="img/dirtdaddy/load.jpg" class="w-full h-48 object-cover mb-4 rounded-md">
+        <h3 class="text-2xl font-bold mb-4 text-accent">Load</h3>
+        <p>Fill with 2,000lbs of materials (light-duty), up to 6,000lbs (heavy-duty).</p>
+      </div>
+      <div class="bg-dark p-6 rounded-lg shadow-lg">
+        <img src="img/dirtdaddy/dump.png" class="w-full h-48 object-cover mb-4 rounded-md">
+        <h3 class="text-2xl font-bold mb-4 text-accent">Dump</h3>
+        <p>Use the hydraulic system to dump materials easily.</p>
+      </div>
     </div>
+  </div>
 </section>
 
-
-
-
-<section class="py-12 bg-white text-dark-gray">
-    <div class="container mx-auto px-6 md:px-12 flex flex-col md:flex-row items-center">
-      <div class="md:w-1/2 mb-8 md:mb-0">
-        <img src="img/dirtdaddy/about.png" alt="Dirt Daddy Detail Shot" class="rounded-lg shadow-lg w-full">
-      </div>
-      <div class="md:w-1/2 md:pl-12">
-        <h2 class="text-3xl font-bold mb-6">Product Details</h2>
-        <p class="text-lg leading-relaxed">
-          The Dirt Daddy is a brand new American invention. It lines the floor of your truck bed with a custom tarp and then pulls the tarp off the vehicle. Think of it as a massive paper towel roll that pulls your truck load off the truck bed.
-          <br><br>
-          An electric winch powers the device. Suitable for gravel, debris, mulch, dirt, household dumps, etc. Suitable for automating city dump runs, DIY home improvement, or landscaping and gardening projects.
-          <br><br>
-          Our rugged steel design and innovative simple design ensures the tool operates under the toughest conditions.
-        </p>
-      </div>
+<section class="py-12 bg-dark text-white">
+  <div class="container mx-auto px-6 md:px-12 flex flex-col md:flex-row items-center">
+    <div class="md:w-1/2 mb-8 md:mb-0">
+      <img src="img/dirtdaddy/about.png" alt="Dirt Daddy Detail Shot" class="rounded-lg shadow-lg w-full">
     </div>
-  </section>
-  
-
+    <div class="md:w-1/2 md:pl-12">
+      <h2 class="text-3xl font-bold mb-6">Product Details</h2>
+      <p class="text-lg leading-relaxed">
+        The Dirt Daddy is a brand new American invention. It lines the floor of your truck bed with a custom tarp and then pulls the tarp off the vehicle. Think of it as a massive paper towel roll that pulls your truck load off the truck bed.
+        <br><br>
+        An electric winch powers the device. Suitable for gravel, debris, mulch, dirt, household dumps, etc. Suitable for automating city dump runs, DIY home improvement, or landscaping and gardening projects.
+        <br><br>
+        Our rugged steel design and innovative simple design ensures the tool operates under the toughest conditions.
+      </p>
+    </div>
+  </div>
+</section>
 
 <section class="py-12">
-    <div class="container mx-auto text-center">
-        <h2 class="text-3xl font-bold mb-8">See Dirt Daddy in Action</h2>
-       
-        <iframe class="w-full rounded-lg shadow-lg"  width="100%" height="315" src="https://www.youtube.com/embed/5zqvyB4TQ-0?si=RZ9DCU3qoAOJ_65L" 
-        title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
-        encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-       
-    </div>
-</section>
-
-<section class="py-12 bg-primary text-white text-center">
-    <h2 class="text-3xl font-bold mb-8">Order Now</h2>
-    <div class="grid gap-8 grid-cols-1 md:grid-cols-2">
-        <div class="bg-accent p-12 rounded-lg text-primary">
-            <h3 class="text-2xl font-bold">Light Duty</h3>
-            <p class="mb-4">Dump up to 2000lb</p>
-            <p class="text-2xl font-bold mb-6">Email us</p>
-            <a href="mailto:bbdinnovation@gmail.com" class="bg-primary text-white py-4 px-12 rounded-full hover:bg-accent transition">bbdinnovation@gmail.com</a>
-        </div>
-        <div class="bg-custom-gray p-12 rounded-lg text-primary">
-            <h3 class="text-2xl font-bold">Heavy Duty</h3>
-            <p class="mb-4">Dump up to 6000lb</p>
-            <p class="text-2xl font-bold mb-6">Email us</p>
-            <a href="mailto:bbdinnovation@gmail.com" class="bg-primary text-white py-4 px-12 rounded-full hover:bg-accent transition">bbdinnovation@gmail.com</a>
-        </div>
-    </div>
+  <div class="container mx-auto text-center">
+    <h2 class="text-3xl font-bold mb-8">See Dirt Daddy in Action</h2>
+    <iframe class="w-full rounded-lg shadow-lg" width="100%" height="315" src="https://www.youtube.com/embed/5zqvyB4TQ-0?si=RZ9DCU3qoAOJ_65L"
+      title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+      encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </div>
 </section>
 
 <footer class="py-12 bg-black text-white text-center">
-    <h2 class="text-3xl font-bold mb-4">Contact Us</h2>
-    <p>Email: <a href="mailto:bbdinnovation@gmail.com" class="text-accent">bbdinnovation@gmail.com</a></p>
+  <h2 class="text-3xl font-bold mb-4">Contact Us</h2>
+  <p>Email: <a href="mailto:bbdinnovation@gmail.com" class="text-accent">bbdinnovation@gmail.com</a></p>
 </footer>
+
+<!-- Shrinking Header Script -->
+<script>
+  const header = document.getElementById('header');
+  const logo = document.getElementById('logo');
+
+  window.addEventListener('scroll', function () {
+    if (window.scrollY > 50) {
+      header.classList.add('py-2');
+      header.classList.remove('py-6');
+      logo.classList.add('w-24');
+      logo.classList.remove('w-32');
+    } else {
+      header.classList.add('py-6');
+      header.classList.remove('py-2');
+      logo.classList.add('w-32');
+      logo.classList.remove('w-24');
+    }
+  });
+</script>
 
 </body>
 </html>
