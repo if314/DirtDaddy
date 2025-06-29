@@ -5,41 +5,46 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dirt Daddy Dump Truck Attachment</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <style>
-    body {
-      font-family: 'Inter', sans-serif;
+    :root {
+      --black: #000000;
+      --yellow: #FFCC00;
+      --dark-gray: #202020;
     }
-    .bg-primary { background-color: #000000; } /* Black */
-    .text-primary { color: #000000; }
-    .bg-accent { background-color: #FFCC00; } /* CAT Yellow */
-    .text-accent { color: #FFCC00; }
+
+    .bg-primary { background-color: var(--black); }
+    .text-primary { color: var(--black); }
+    .bg-accent { background-color: var(--yellow); }
+    .text-accent { color: var(--yellow); }
     .bg-light-gray { background-color: #f0f0f0; }
-    .text-dark-gray { color: #202020; }
-    .bg-dark { background-color: #1a1a1a; } /* Slightly lighter black */
-    .bg-black { background-color: #000000; }
-    .bg-custom-gray { background-color: #1a1a1a; }
-    .custom-gray { color: #1a1a1a; }
+    .text-dark-gray { color: var(--dark-gray); }
+    .bg-dark { background-color: var(--dark-gray); }
     .text-3xlplus { font-size: 3.5rem; line-height: 4rem; }
-    .p-12 { padding: 3rem; margin: 1.5rem; }
+    .p-12 {
+      padding: 3rem;
+      margin: 1.5rem;
+    }
     @media (min-width: 768px) {
       .text-3xlplus { font-size: 5.1rem; line-height: 6rem; }
     }
-    .transition-all { transition: all 0.3s ease; }
+    .transition-all {
+      transition: all 0.3s ease;
+    }
   </style>
 </head>
-<body class="bg-dark text-white">
+<body class="bg-primary text-white">
 
-<header id="header" class="bg-primary fixed top-0 w-full z-50 py-6 transition-all shadow-lg">
+<!-- Header -->
+<header id="header" class="bg-black fixed top-0 w-full z-50 py-6 transition-all shadow-lg">
   <div class="container mx-auto flex flex-wrap items-center justify-between px-4">
     <div class="flex items-center">
       <img id="logo" src="img/logoY.svg" alt="Dirt Daddy Logo" class="w-32 h-auto transition-all">
     </div>
     <div class="flex space-x-4">
-      <a href="mailto:bbdinnovation@gmail.com?subject=2,500 lb Dirt Daddy Tool&body=Hello, I am looking to buy the 2,500 lb Dirt Daddy Model for $999." class="bg-accent text-primary font-bold py-2 px-6 rounded-full hover:bg-white transition text-sm">
+      <a href="mailto:bbdinnovation@gmail.com?subject=2,500 lb Dirt Daddy Tool&body=Hello, I am looking to buy the 2,500 lb Dirt Daddy Model for $999." class="bg-accent text-primary font-bold py-2 px-6 rounded-full hover:bg-white hover:text-black transition text-sm">
         2,500 lb $999
       </a>
-      <a href="mailto:bbdinnovation@gmail.com?subject=4,500 lb Dirt Daddy Tool&body=Hello, I am looking to buy the 4,500 lb Dirt Daddy Model for $1,999." class="bg-black text-white font-bold py-2 px-6 rounded-full hover:bg-accent hover:text-black transition text-sm">
+      <a href="mailto:bbdinnovation@gmail.com?subject=4,500 lb Dirt Daddy Tool&body=Hello, I am looking to buy the 4,500 lb Dirt Daddy Model for $1,999." class="bg-dark text-white font-bold py-2 px-6 rounded-full hover:bg-accent hover:text-black transition text-sm">
         4,500 lb $1999
       </a>
     </div>
@@ -48,33 +53,36 @@
 
 <div class="h-24"></div>
 
-<section class="py-12">
+<!-- Hero -->
+<section class="py-12 px-4">
   <div class="container mx-auto flex flex-col md:flex-row items-center">
-    <div class="md:w-1/2 p-6">
-      <p class="mb-12 font-black text-3xlplus text-center md:text-left text-accent">Turn any truck into a dump truck</p>
+    <div class="md:w-1/2 space-y-8">
+      <p class="font-black text-3xlplus text-accent text-center md:text-left">Turn any truck into a dump truck</p>
       <ul class="list-disc pl-6 space-y-4 text-xl font-bold text-accent">
         <li>Easy Hitch Attachment</li>
         <li>High Load Capacity</li>
         <li>Durable Construction</li>
       </ul>
     </div>
-    <div class="md:w-1/2 p-6">
-      <img src="img/main.jpeg" alt="Dirt Daddy in Action" class="rounded-lg shadow-lg w-full">
+    <div class="md:w-1/2 mt-8 md:mt-0">
+      <img src="img/main.jpeg" alt="Dirt Daddy in Action" class="rounded-lg shadow-2xl w-full">
     </div>
   </div>
 </section>
 
-<section class="py-12">
-  <div class="container mx-auto text-center">
+<!-- Video -->
+<section class="py-12 bg-dark text-white">
+  <div class="container mx-auto text-center px-4">
     <h2 class="text-3xl font-bold mb-8 text-accent">See Dirt Daddy in Action</h2>
-    <iframe class="w-full rounded-lg shadow-lg" width="100%" height="315" src="https://www.youtube.com/embed/5zqvyB4TQ-0?si=RZ9DCU3qoAOJ_65L"
+    <iframe class="w-full rounded-lg shadow-lg" height="315" src="https://www.youtube.com/embed/5zqvyB4TQ-0?si=RZ9DCU3qoAOJ_65L"
       title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
-      encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   </div>
 </section>
 
-<section class="py-12 bg-primary text-white">
-  <div class="container mx-auto text-center">
+<!-- How It Works -->
+<section class="py-12 bg-black text-white">
+  <div class="container mx-auto text-center px-4">
     <h2 class="text-3xl font-bold mb-8 text-accent">How It Works</h2>
     <div class="grid gap-8 grid-cols-1 md:grid-cols-3">
       <div class="bg-dark p-6 rounded-lg shadow-lg">
@@ -85,7 +93,7 @@
       <div class="bg-dark p-6 rounded-lg shadow-lg">
         <img src="img/dirtdaddy/load.jpg" class="w-full h-48 object-cover mb-4 rounded-md">
         <h3 class="text-2xl font-bold mb-4 text-accent">Load</h3>
-        <p>Fill with 2,000lbs of materials (light-duty), up to 6,000lbs (heavy-duty).</p>
+        <p>Fill with 2,000 lbs of materials (light-duty), up to 6,000 lbs (heavy-duty).</p>
       </div>
       <div class="bg-dark p-6 rounded-lg shadow-lg">
         <img src="img/dirtdaddy/dump.png" class="w-full h-48 object-cover mb-4 rounded-md">
@@ -96,6 +104,7 @@
   </div>
 </section>
 
+<!-- Product Details -->
 <section class="py-12 bg-dark text-white">
   <div class="container mx-auto px-6 md:px-12 flex flex-col md:flex-row items-center">
     <div class="md:w-1/2 mb-8 md:mb-0">
@@ -103,7 +112,7 @@
     </div>
     <div class="md:w-1/2 md:pl-12">
       <h2 class="text-3xl font-bold mb-6 text-accent">Product Details</h2>
-      <p class="text-lg leading-relaxed">
+      <p class="text-lg leading-relaxed text-white">
         The Dirt Daddy is a brand new American invention. It lines the floor of your truck bed with a custom tarp and then pulls the tarp off the vehicle. Think of it as a massive paper towel roll that pulls your truck load off the truck bed.
         <br><br>
         An electric winch powers the device. Suitable for gravel, debris, mulch, dirt, household dumps, etc. Suitable for automating city dump runs, DIY home improvement, or landscaping and gardening projects.
@@ -114,13 +123,17 @@
   </div>
 </section>
 
+<!-- Contact -->
 <footer class="py-12 bg-black text-white text-center">
   <h2 class="text-3xl font-bold mb-4 text-accent">Contact Us</h2>
-  <p>Email: 
-    <a href="mailto:bbdinnovation@gmail.com?subject=Price Check on the Dirt Daddy Tool&body=Hello, I am interested in purchasing one of these tools." class="text-accent">bbdinnovation@gmail.com</a>
+  <p>Email:
+    <a href="mailto:bbdinnovation@gmail.com?subject=Price Check on the Dirt Daddy Tool&body=Hello, I am interested in purchasing one of these tools." class="text-accent underline hover:text-white transition">
+      bbdinnovation@gmail.com
+    </a>
   </p>
 </footer>
 
+<!-- Shrinking Header Script -->
 <script>
   const header = document.getElementById('header');
   const logo = document.getElementById('logo');
