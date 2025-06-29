@@ -10,16 +10,16 @@
     body {
       font-family: 'Inter', sans-serif;
     }
-    .bg-primary { background-color: #302D26; }
-    .text-primary { color: #302D26; }
-    .bg-accent { background-color: #CCFF7A; }
-    .text-accent { color: #CCFF7A; }
+    .bg-primary { background-color: #000000; } /* Black */
+    .text-primary { color: #000000; }
+    .bg-accent { background-color: #FFCC00; } /* CAT Yellow */
+    .text-accent { color: #FFCC00; }
     .bg-light-gray { background-color: #f0f0f0; }
     .text-dark-gray { color: #202020; }
-    .bg-dark { background-color: #202020; }
+    .bg-dark { background-color: #1a1a1a; } /* Slightly lighter black */
     .bg-black { background-color: #000000; }
-    .bg-custom-gray { background-color: #09093d; }
-    .custom-gray { color: #09093d; }
+    .bg-custom-gray { background-color: #1a1a1a; }
+    .custom-gray { color: #1a1a1a; }
     .text-3xlplus { font-size: 3.5rem; line-height: 4rem; }
     .p-12 { padding: 3rem; margin: 1.5rem; }
     @media (min-width: 768px) {
@@ -39,7 +39,7 @@
       <a href="mailto:bbdinnovation@gmail.com?subject=2,500 lb Dirt Daddy Tool&body=Hello, I am looking to buy the 2,500 lb Dirt Daddy Model for $999." class="bg-accent text-primary font-bold py-2 px-6 rounded-full hover:bg-white transition text-sm">
         2,500 lb $999
       </a>
-      <a href="mailto:bbdinnovation@gmail.com?subject=4,500 lb Dirt Daddy Tool&body=Hello, I am looking to buy the 4,500 lb Dirt Daddy Model for $1,999." class="bg-custom-gray text-white font-bold py-2 px-6 rounded-full hover:bg-accent hover:text-primary transition text-sm">
+      <a href="mailto:bbdinnovation@gmail.com?subject=4,500 lb Dirt Daddy Tool&body=Hello, I am looking to buy the 4,500 lb Dirt Daddy Model for $1,999." class="bg-black text-white font-bold py-2 px-6 rounded-full hover:bg-accent hover:text-black transition text-sm">
         4,500 lb $1999
       </a>
     </div>
@@ -51,7 +51,7 @@
 <section class="py-12">
   <div class="container mx-auto flex flex-col md:flex-row items-center">
     <div class="md:w-1/2 p-6">
-      <p class="mb-12 font-black text-3xlplus text-center md:text-left">Turn any truck into a dump truck</p>
+      <p class="mb-12 font-black text-3xlplus text-center md:text-left text-accent">Turn any truck into a dump truck</p>
       <ul class="list-disc pl-6 space-y-4 text-xl font-bold text-accent">
         <li>Easy Hitch Attachment</li>
         <li>High Load Capacity</li>
@@ -66,7 +66,7 @@
 
 <section class="py-12">
   <div class="container mx-auto text-center">
-    <h2 class="text-3xl font-bold mb-8">See Dirt Daddy in Action</h2>
+    <h2 class="text-3xl font-bold mb-8 text-accent">See Dirt Daddy in Action</h2>
     <iframe class="w-full rounded-lg shadow-lg" width="100%" height="315" src="https://www.youtube.com/embed/5zqvyB4TQ-0?si=RZ9DCU3qoAOJ_65L"
       title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
       encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -75,7 +75,7 @@
 
 <section class="py-12 bg-primary text-white">
   <div class="container mx-auto text-center">
-    <h2 class="text-3xl font-bold mb-8">How It Works</h2>
+    <h2 class="text-3xl font-bold mb-8 text-accent">How It Works</h2>
     <div class="grid gap-8 grid-cols-1 md:grid-cols-3">
       <div class="bg-dark p-6 rounded-lg shadow-lg">
         <img src="img/dirtdaddy/attach.png" class="w-full h-48 object-cover mb-4 rounded-md">
@@ -102,7 +102,7 @@
       <img src="img/dirtdaddy/about.png" alt="Dirt Daddy Detail Shot" class="rounded-lg shadow-lg w-full">
     </div>
     <div class="md:w-1/2 md:pl-12">
-      <h2 class="text-3xl font-bold mb-6">Product Details</h2>
+      <h2 class="text-3xl font-bold mb-6 text-accent">Product Details</h2>
       <p class="text-lg leading-relaxed">
         The Dirt Daddy is a brand new American invention. It lines the floor of your truck bed with a custom tarp and then pulls the tarp off the vehicle. Think of it as a massive paper towel roll that pulls your truck load off the truck bed.
         <br><br>
@@ -115,7 +115,7 @@
 </section>
 
 <footer class="py-12 bg-black text-white text-center">
-  <h2 class="text-3xl font-bold mb-4">Contact Us</h2>
+  <h2 class="text-3xl font-bold mb-4 text-accent">Contact Us</h2>
   <p>Email: 
     <a href="mailto:bbdinnovation@gmail.com?subject=Price Check on the Dirt Daddy Tool&body=Hello, I am interested in purchasing one of these tools." class="text-accent">bbdinnovation@gmail.com</a>
   </p>
@@ -142,4 +142,3 @@
 
 </body>
 </html>
-
