@@ -204,7 +204,23 @@
   transition: background 0.3s ease;
 }
   
-  
+.image-frame {
+  background: #2D2D2D;
+  padding: 8px;
+  border: 1px solid #444;
+  border-radius: 6px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease;
+}
+
+.image-frame:hover {
+  transform: scale(1.02);
+}
+
+.image-frame img {
+  border-radius: 4px;
+}
+ 
   </style>
 </head>
 <body>
@@ -256,8 +272,10 @@
     <!-- Features -->
     <section class="features">
       <div class="feature">
-        <img src="https://www.bbdtools.com/img/dirtdaddy/gearbox-driveaxle-removedplate.png" alt="Hitch Attachment">
-        <div class="text">
+          <div class="image-frame">
+            <img src="https://www.bbdtools.com/img/dirtdaddy/gearbox-driveaxle-removedplate.png" alt="Hitch Attachment">
+          </div>
+          <div class="text">
           <h2>Easy Hitch Attachment</h2>
           <p>Easily secures to your truck’s hitch</p>
         </div>
@@ -267,10 +285,14 @@
           <h2>High Load Capacity</h2>
           <p>Handles 2,500 lb or 4,500 lb of dirt, gravel, mulch—whatever you need.</p>
         </div>
-        <img src="https://www.bbdtools.com/img/dirtdaddy/heavyload.png" alt="High Load">
+          <div class="image-frame">
+            <img src="https://www.bbdtools.com/img/dirtdaddy/heavyload.png" alt="High Load">
+          </div>
       </div>
       <div class="feature">
-        <img src="https://www.bbdtools.com/img/dirtdaddy/dump2-sideview.jpg" alt="Durable Steel">
+        <div class="image-frame">
+            <img src="https://www.bbdtools.com/img/dirtdaddy/dump2-sideview.jpg" alt="Durable Steel">
+        </div>
         <div class="text">
           <h2>Durable Construction</h2>
           <p>Rugged steel and electric winch to power through tough jobs.</p>
