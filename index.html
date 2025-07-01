@@ -138,6 +138,50 @@
         font-size:1rem;
       }
     }
+.cart-container {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  position: fixed;
+  z-index: 20;
+}
+
+.cart-icon {
+  cursor: pointer;
+  font-size: 1.5rem;
+  position: relative;
+}
+
+.cart-overlay {
+  position: absolute;
+  top: 2.5rem;
+  right: 0;
+  width: 220px;
+  background: white;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  padding: 1rem;
+  display: none;
+}
+
+.cart-container:hover .cart-overlay {
+  display: block;
+}
+
+.cart-overlay ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 0.5rem;
+  max-height: 150px;
+  overflow-y: auto;
+}
+
+.cart-overlay li {
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+  
+  
   </style>
 </head>
 <body>
@@ -150,6 +194,14 @@
       <a href="#">Contact</a>
       <a href="#">Cart</a>
     </nav>
+    <div class="cart-container">
+      <span class="cart-icon">🛒</span>
+      <div class="cart-overlay" id="cart-overlay">
+        <h4>Your Cart</h4>
+        <ul id="cart-items"></ul>
+        <p><strong>Total:</strong> $<span id="cart-total">0.00</span></p>
+      </div>
+    </div>
   </header>
 
   <!-- Hero Section -->
@@ -165,12 +217,12 @@
   <div class="buy-bar">
     <div>
       <strong>Pick your model:</strong><br>
-      <select>
-        <option>2,500 lb – $999</option>
-        <option>4,500 lb – $1,999</option>
+      <select id="product-select">
+        <option value="2500" data-price="999">2,500 lb – $999</option>
+        <option value="4500" data-price="1999">4,500 lb – $1,999</option>
       </select>
     </div>
-    <button style="padding:0.75rem 1.5rem; background:#0078D4; color:#fff; border:none; border-radius:4px;">
+    <button id="add-to-cart" style="padding:0.75rem 1.5rem; background:#0078D4; color:#fff; border:none; border-radius:4px;">
       Add to Cart
     </button>
   </div>
@@ -311,6 +363,42 @@
         panel.style.display = panel.style.display === 'block' ? 'none' : 'block';
       };
     });
+  
+  const cart = [];
+  const addToCartBtn = document.getElementById('add-to-cart');
+  const productSelect = document.getElementById('product-select');
+  const cartItemsEl = document.getElementById('cart-items');
+  const cartTotalEl = document.getElementById('cart-total');
+
+  addToCartBtn.addEventListener('click', () => {
+    const selectedOption = productSelect.options[productSelect.selectedIndex];
+    const size = selectedOption.value;
+    const label = selectedOption.text;
+    const price = parseFloat(selectedOption.dataset.price);
+
+    const existingItem = cart.find(item => item.label === label);
+    if (existingItem) {
+      existingItem.qty += 1;
+    } else {
+      cart.push({ label, price, qty: 1 });
+    }
+
+    updateCartUI();
+  });
+
+  function updateCartUI() {
+    cartItemsEl.innerHTML = '';
+    let total = 0;
+
+    cart.forEach(item => {
+      const li = document.createElement('li');
+      li.textContent = `${item.label} × ${item.qty} = $${(item.price * item.qty).toFixed(2)}`;
+      cartItemsEl.appendChild(li);
+      total += item.price * item.qty;
+    });
+
+    cartTotalEl.textContent = total.toFixed(2);
+  } 
   </script>
 </body>
 </html>
