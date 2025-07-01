@@ -1,160 +1,290 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dirt Daddy Dump Truck Attachment</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <title>Dirt Daddy – Truck Bed Dump Attachment</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    .bg-primary { background-color: #302D26; }
-    .text-primary { color: #302D26; }
-    .bg-accent { background-color: #CCFF7A; }
-    .text-accent { color: #CCFF7A; }
-    .bg-light-gray { background-color: #f0f0f0; }
-    .text-dark-gray { color: #202020; }
-    .bg-dark { background-color: #202020; }
-    .bg-black { background-color: #000000; }
-    .bg-custom-gray { background-color: #09093d; }
-    .custom-gray { color: #09093d; }
-    .text-3xlplus { font-size: 3.5rem; line-height: 4rem; }
-    .p-12 {
-      padding: 3rem;
-      margin: 1.5rem;
+    /* Base Reset */
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family:Arial,sans-serif; color:#333; line-height:1.6; }
+    img { max-width:100%; display:block; }
+
+    header { position:sticky; top:0; background:#fff; border-bottom:1px solid #ddd; padding:1rem; z-index:10; }
+    nav { display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; }
+    nav a { margin:0.5rem; text-decoration:none; color:#333; font-weight:bold; }
+
+    .hero { position:relative; }
+    .hero img { width:100%; height:auto; }
+    .hero .title {
+      position:absolute; bottom:20px; left:20px;
+      background:rgba(255,255,255,0.9); padding:1rem;
+      max-width:90%;
     }
-    @media (min-width: 768px) {
-      .text-3xlplus { font-size: 5.1rem; line-height: 6rem; }
+
+    .buy-bar {
+      background:#fafafa; border-top:1px solid #eee;
+      padding:1rem; display:flex; flex-wrap:wrap;
+      justify-content:space-between; align-items:center;
+      position:sticky; bottom:0;
+      gap:1rem;
     }
-    .transition-all {
-      transition: all 0.3s ease;
+
+    .buy-bar select, .buy-bar button {
+      font-size:1rem;
+    }
+
+    .container {
+      width:90%; max-width:1000px; margin:2rem auto;
+    }
+
+    .features { display:flex; flex-direction:column; gap:2rem; }
+
+    .feature {
+      display:flex; flex-wrap:wrap; align-items:center; gap:1rem;
+    }
+
+    .feature img, .feature .text {
+      flex:1 1 300px;
+    }
+
+    .trust-row {
+      display:flex; flex-wrap:wrap; justify-content:space-around; margin:2rem 0; gap:1rem;
+    }
+
+    .trust-item {
+      text-align:center; flex:1 1 40%;
+    }
+
+    .accordion { border-top:1px solid #ddd; }
+    .accordion h3 {
+      padding:1rem; cursor:pointer; background:#f5f5f5;
+      font-size:1.2rem;
+    }
+    .accordion div { padding:1rem; display:none; }
+
+    .reviews {
+      background:#fffaf0; padding:2rem; margin:2rem 0;
+    }
+
+    .accessory-carousel {
+      display:flex; gap:1rem; overflow-x:auto; padding-bottom:1rem;
+    }
+
+    .accessory {
+      min-width:150px; text-align:center;
+    }
+
+    footer {
+      background:#333; color:#eee; padding:2rem; text-align:center;
+    }
+
+    footer a { color:#fff; text-decoration:none; margin:0 0.5rem; }
+
+    /* Responsive Tweaks */
+    @media (max-width: 768px) {
+      nav {
+        flex-direction:column;
+        align-items:flex-start;
+      }
+
+      .hero .title {
+        position:relative;
+        background:rgba(255,255,255,0.95);
+        margin-top:-4px;
+      }
+
+      .feature {
+        flex-direction:column;
+      }
+
+      .trust-item {
+        flex:1 1 100%;
+      }
+
+      .buy-bar {
+        flex-direction:column;
+        align-items:flex-start;
+      }
+
+      .buy-bar select, .buy-bar button {
+        width:100%;
+      }
+
+      .accordion h3 {
+        font-size:1rem;
+      }
     }
   </style>
 </head>
-<body class="bg-dark text-white">
+<body>
 
-<!-- Header -->
-<header id="header" class="bg-primary fixed top-0 w-full z-50 py-6 transition-all shadow-lg">
-  <div class="container mx-auto flex flex-wrap items-center justify-between px-4">
-    <div class="flex items-center space-x-6">
-      <img id="logo" src="img/logoY.svg" alt="Dirt Daddy Logo" class="w-32 h-auto transition-all">
+  <!-- Header & Nav -->
+  <header>
+    <nav>
+      <a href="#">Products</a>
+      <a href="#">Resources</a>
+      <a href="#">Contact</a>
+      <a href="#">Cart</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <img src="https://via.placeholder.com/1600x600?text=Dirt+Daddy+in+Action" alt="Dirt Daddy in truck bed">
+    <div class="title">
+      <h1>Dirt Daddy™ Dump Attachment</h1>
+      <p>Turn any pickup truck into a dump truck — 2,500 lb $999 | 4,500 lb $1,999</p>
     </div>
-    <div class="flex space-x-4">
-      <a href="mailto:bbdinnovation@gmail.com?subject=2,500 lb Dirt Daddy Tool&body=Hello, I am looking to buy the 2,500 lb Dirt Daddy Model for $999." class="bg-accent text-primary font-bold py-2 px-6 rounded-full hover:bg-white transition text-sm">
-        2,500 lb $999
-      </a>
-      <a href="mailto:bbdinnovation@gmail.com?subject=4,500 lb Dirt Daddy Tool&body=Hello, I am looking to buy the 4,500 lb Dirt Daddy Model for $1,999." class="bg-custom-gray text-white font-bold py-2 px-6 rounded-full hover:bg-accent hover:text-primary transition text-sm">
-        4,500 lb $1999
-      </a>
+  </section>
+
+  <!-- Buy Bar -->
+  <div class="buy-bar">
+    <div>
+      <strong>Pick your model:</strong><br>
+      <select>
+        <option>2,500 lb – $999</option>
+        <option>4,500 lb – $1,999</option>
+      </select>
     </div>
+    <button style="padding:0.75rem 1.5rem; background:#0078D4; color:#fff; border:none; border-radius:4px;">
+      Add to Cart
+    </button>
   </div>
-</header>
 
-<div class="h-24"></div>
-
-<!-- Hero Section -->
-<section class="py-16 bg-dark">
-  <div class="container mx-auto flex flex-col md:flex-row items-center">
-    <div class="md:w-1/2 p-6">
-      <p class="mb-12 font-black text-3xlplus text-center md:text-left text-accent">Turn any truck into a dump truck</p>
-      <ul class="list-disc pl-6 space-y-4 text-xl font-bold text-accent">
-        <li>Easy Hitch Attachment</li>
-        <li>High Load Capacity</li>
-        <li>Durable Construction</li>
-      </ul>
-    </div>
-    <div class="md:w-1/2 p-6">
-      <img src="img/main.jpeg" alt="Dirt Daddy in Action" class="rounded-lg shadow-lg w-full">
-    </div>
-  </div>
-</section>
-
-<hr class="border-t border-gray-600 opacity-30 my-8">
-
-<!-- Video Section -->
-<section class="py-16 bg-black text-white">
-  <div class="container mx-auto text-center px-4">
-    <h2 class="text-3xl font-bold mb-8">See Dirt Daddy in Action</h2>
-    <iframe class="w-full rounded-lg shadow-lg" height="315" src="https://www.youtube.com/embed/5zqvyB4TQ-0?si=RZ9DCU3qoAOJ_65L"
-      title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
-      encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-  </div>
-</section>
-
-<hr class="border-t border-gray-600 opacity-30 my-8">
-
-<!-- How It Works -->
-<section class="py-16 bg-primary text-white">
-  <div class="container mx-auto text-center px-4">
-    <h2 class="text-3xl font-bold mb-8">How It Works</h2>
-    <div class="grid gap-8 grid-cols-1 md:grid-cols-3">
-      <div class="bg-dark p-6 rounded-lg shadow-lg">
-        <img src="img/dirtdaddy/attach.png" class="w-full h-48 object-cover mb-4 rounded-md">
-        <h3 class="text-2xl font-bold mb-4 text-accent">Attach</h3>
-        <p>Easily secure the Dirt Daddy to your truck's hitch.</p>
+  <main class="container">
+    <!-- Features -->
+    <section class="features">
+      <div class="feature">
+        <img src="https://via.placeholder.com/400x300?text=Easy+Hitch+Attachment" alt="Hitch Attachment">
+        <div class="text">
+          <h2>Easy Hitch Attachment</h2>
+          <p>Easily secures to your truck’s hitch—ready in seconds.</p>
+        </div>
       </div>
-      <div class="bg-dark p-6 rounded-lg shadow-lg">
-        <img src="img/dirtdaddy/load.jpg" class="w-full h-48 object-cover mb-4 rounded-md">
-        <h3 class="text-2xl font-bold mb-4 text-accent">Load</h3>
-        <p>Fill with 2,000lbs of materials (light-duty), up to 6,000lbs (heavy-duty).</p>
+      <div class="feature">
+        <div class="text">
+          <h2>High Load Capacity</h2>
+          <p>Handles 2,500 lb or 4,500 lb of dirt, gravel, mulch—whatever you need.</p>
+        </div>
+        <img src="https://via.placeholder.com/400x300?text=High+Load+Capacity" alt="High Load">
       </div>
-      <div class="bg-dark p-6 rounded-lg shadow-lg">
-        <img src="img/dirtdaddy/dump.png" class="w-full h-48 object-cover mb-4 rounded-md">
-        <h3 class="text-2xl font-bold mb-4 text-accent">Dump</h3>
-        <p>Use the hydraulic system to dump materials easily.</p>
+      <div class="feature">
+        <img src="https://via.placeholder.com/400x300?text=Durable+Construction" alt="Durable Steel">
+        <div class="text">
+          <h2>Durable Construction</h2>
+          <p>Rugged steel and electric winch to power through tough jobs.</p>
+        </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<hr class="border-t border-gray-600 opacity-30 my-8">
+    
+    <!-- Trust Bar -->
+    <section class="trust-row">
+      <div class="trust-item">
+        <img src="https://via.placeholder.com/50?text=👍" alt="Satisfaction Guarantee">
+        <p>Great dump or your money back</p>
+      </div>
+      <div class="trust-item">
+        <img src="https://via.placeholder.com/50?text=🔧" alt="5-Year Warranty">
+        <p>Free 5‑year warranty</p>
+      </div>
+      <div class="trust-item">
+        <img src="https://via.placeholder.com/50?text=🚚" alt="Free Shipping">
+        <p>Free shipping in USA</p>
+      </div>
+      <div class="trust-item">
+        <img src="https://via.placeholder.com/50?text=⭐" alt="Ratings">
+        <p>Trusted by professionals</p>
+      </div>
+    </section>
 
-<!-- Product Details -->
-<section class="py-16 bg-dark text-white">
-  <div class="container mx-auto px-6 md:px-12 flex flex-col md:flex-row items-center">
-    <div class="md:w-1/2 mb-8 md:mb-0">
-      <img src="img/dirtdaddy/about.png" alt="Dirt Daddy Detail Shot" class="rounded-lg shadow-lg w-full">
-    </div>
-    <div class="md:w-1/2 md:pl-12">
-      <h2 class="text-3xl font-bold mb-6 text-accent">Product Details</h2>
-      <p class="text-lg leading-relaxed text-white">
-        The Dirt Daddy is a brand new American invention. It lines the floor of your truck bed with a custom tarp and then pulls the tarp off the vehicle. Think of it as a massive paper towel roll that pulls your truck load off the truck bed.
-        <br><br>
-        An electric winch powers the device. Suitable for gravel, debris, mulch, dirt, household dumps, etc. Suitable for automating city dump runs, DIY home improvement, or landscaping and gardening projects.
-        <br><br>
-        Our rugged steel design and innovative simple design ensures the tool operates under the toughest conditions.
-      </p>
-    </div>
-  </div>
-</section>
+    <!-- Accordion (Details) -->
+    <section class="accordion">
+      <h3>How It Works</h3>
+      <div>
+        <h4>1. Attach</h4>
+        <p>Secure the Dirt Daddy to your truck's hitch.</p>
+        <h4>2. Load</h4>
+        <p>Fill with up to 6,000 lb of material.</p>
+        <h4>3. Dump</h4>
+        <p>Use the electric winch to dump with ease.</p>
+      </div>
+    </section>
+    <!-- Accordion (Details) -->
+    <section class="accordion">
+      <h3>Description</h3>
+      <div>
+        <h4>1. Attach</h4>
+        <p>Secure the Dirt Daddy to your truck's hitch.</p>
+        <h4>2. Load</h4>
+        <p>Fill with up to 6,000 lb of material.</p>
+        <h4>3. Dump</h4>
+        <p>Use the electric winch to dump with ease.</p>
+      </div>
+    </section>
+    <section class="accordion">
+      <h3>Whats included</h3>
+      <div>
+        <h4>1. Attach</h4>
+        <p>Secure the Dirt Daddy to your truck's hitch.</p>
+        <h4>2. Load</h4>
+        <p>Fill with up to 6,000 lb of material.</p>
+        <h4>3. Dump</h4>
+        <p>Use the electric winch to dump with ease.</p>
+      </div>
+    </section>
+    <section class="accordion">
+      <h3>Product Specs</h3>
+      <div>
+        <h4>1. Attach</h4>
+        <p>Secure the Dirt Daddy to your truck's hitch.</p>
+        <h4>2. Load</h4>
+        <p>Fill with up to 6,000 lb of material.</p>
+        <h4>3. Dump</h4>
+        <p>Use the electric winch to dump with ease.</p>
+      </div>
+    </section>
 
-<hr class="border-t border-gray-600 opacity-30 my-8">
 
-<!-- Contact Section -->
-<footer class="py-16 bg-black text-white text-center">
-  <h2 class="text-3xl font-bold mb-4">Contact Us</h2>
-  <p>Email:
-    <a href="mailto:bbdinnovation@gmail.com?subject=Price Check on the Dirt Daddy Tool&body=Hello, I am interested in purchasing one of these tools." class="text-accent hover:underline">bbdinnovation@gmail.com</a>
-  </p>
-</footer>
+    <!-- Reviews -->
+    <section class="reviews">
+      <h2>What Our Customers Say</h2>
+      <p>"The Dirt Daddy made unloading mulch an absolute breeze. Highly recommend!" – A. Rodriguez</p>
+    </section>
 
-<!-- Header Resize Script -->
-<script>
-  const header = document.getElementById('header');
-  const logo = document.getElementById('logo');
+    <!-- Accessories -->
+    <section>
+      <h2>Accessories & Bundles</h2>
+      <div class="accessory-carousel">
+        <div class="accessory">
+          <img src="https://via.placeholder.com/150?text=Tarp+Cover" alt="Tarp Cover">
+          <p>Tarp Cover Kit</p>
+        </div>
+        <div class="accessory">
+          <img src="https://via.placeholder.com/150?text=Winch+Upgrade" alt="Winch Upgrade">
+          <p>Heavy‑Duty Winch</p>
+        </div>
+      </div>
+    </section>
+  </main>
 
-  window.addEventListener('scroll', function () {
-    if (window.scrollY > 50) {
-      header.classList.add('py-2');
-      header.classList.remove('py-6');
-      logo.classList.add('w-24');
-      logo.classList.remove('w-32');
-    } else {
-      header.classList.add('py-6');
-      header.classList.remove('py-2');
-      logo.classList.add('w-32');
-      logo.classList.remove('w-24');
-    }
-  });
-</script>
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 BBD Tools • Contact: bbdinnovation@gmail.com</p>
+    <p>
+      <a href="#">Customer Service</a> |
+      <a href="#">Guides</a>
+    </p>
+  </footer>
 
+  <script>
+    document.querySelectorAll('.accordion h3').forEach(header => {
+      header.onclick = () => {
+        const panel = header.nextElementSibling;
+        panel.style.display = panel.style.display === 'block' ? 'none' : 'block';
+      };
+    });
+  </script>
 </body>
 </html>
