@@ -68,13 +68,36 @@
     }
 
     .accessory-carousel {
-      display:flex; gap:1rem; overflow-x:auto; padding-bottom:1rem;
+      display: flex;
+      gap: 1rem;
+      overflow-x: auto;
+      padding-bottom: 1rem;
+      padding-top: 1rem;
     }
-
+    
     .accessory {
-      min-width:150px; text-align:center;
+      flex: 0 0 auto;
+      width: 140px;
+      text-align: center;
     }
 
+    .accessory img {
+      width: 100%;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+
+
+    .accessory-carousel::-webkit-scrollbar {
+      height: 6px;
+    }
+    .accessory-carousel::-webkit-scrollbar-thumb {
+      background: #bbb;
+      border-radius: 3px;
+    }
+    
     footer {
       background:#333; color:#eee; padding:2rem; text-align:center;
     }
@@ -264,6 +287,10 @@
         <div class="accessory">
           <img src="https://www.bbdtools.com/img/dirtdaddy/7500lbs-winch-upgrade.png" alt="Winch Upgrade">
           <p>Heavy‑Duty Winch</p>
+        </div>
+        <div class="accessory">
+          <img src="https://www.bbdtools.com/img/dirtdaddy/Battery.png" alt="Battery Pack">
+          <p>12V Battery Kit</p>
         </div>
       </div>
     </section>
