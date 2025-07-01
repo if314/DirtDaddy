@@ -139,11 +139,10 @@
       }
     }
 .cart-container {
-  position: absolute;
+  position: fixed;
   top: 1rem;
   right: 1rem;
-  position: fixed;
-  z-index: 20;
+  z-index: 999;
 }
 
 .cart-icon {
@@ -156,7 +155,7 @@
   position: absolute;
   top: 2.5rem;
   right: 0;
-  width: 220px;
+  width: 250px;
   background: white;
   border: 1px solid #ccc;
   box-shadow: 0 2px 6px rgba(0,0,0,0.2);
@@ -164,21 +163,45 @@
   display: none;
 }
 
-.cart-container:hover .cart-overlay {
+.cart-overlay.open {
   display: block;
 }
 
 .cart-overlay ul {
   list-style: none;
   padding: 0;
-  margin: 0 0 0.5rem;
-  max-height: 150px;
+  margin: 0 0 1rem;
+  max-height: 200px;
   overflow-y: auto;
 }
 
 .cart-overlay li {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.75rem;
   font-size: 0.9rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cart-actions button {
+  margin: 0 2px;
+  padding: 0.2rem 0.5rem;
+  font-size: 0.8rem;
+}
+
+#checkout-btn {
+  background: #0078D4;
+  color: white;
+  border: none;
+  padding: 0.6rem 1rem;
+  width: 100%;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+#add-to-cart.clicked {
+  background-color: #005fa3;
+  transition: background 0.3s ease;
 }
   
   
@@ -192,16 +215,17 @@
       <a href="#">Products</a>
       <a href="#">Resources</a>
       <a href="#">Contact</a>
-      <a href="#">Cart</a>
-    </nav>
-    <div class="cart-container">
-      <span class="cart-icon">🛒</span>
+    
+    <div class="cart-container" id="cart-container">
+      <span class="cart-icon" id="cart-icon">🛒</span>
       <div class="cart-overlay" id="cart-overlay">
         <h4>Your Cart</h4>
         <ul id="cart-items"></ul>
         <p><strong>Total:</strong> $<span id="cart-total">0.00</span></p>
+        <button id="checkout-btn">Checkout</button>
       </div>
     </div>
+  </nav>
   </header>
 
   <!-- Hero Section -->
@@ -363,16 +387,18 @@
         panel.style.display = panel.style.display === 'block' ? 'none' : 'block';
       };
     });
-  
+    
   const cart = [];
   const addToCartBtn = document.getElementById('add-to-cart');
   const productSelect = document.getElementById('product-select');
   const cartItemsEl = document.getElementById('cart-items');
   const cartTotalEl = document.getElementById('cart-total');
+  const cartOverlay = document.getElementById('cart-overlay');
+  const checkoutBtn = document.getElementById('checkout-btn');
 
+  // Click event for add to cart
   addToCartBtn.addEventListener('click', () => {
     const selectedOption = productSelect.options[productSelect.selectedIndex];
-    const size = selectedOption.value;
     const label = selectedOption.text;
     const price = parseFloat(selectedOption.dataset.price);
 
@@ -383,22 +409,76 @@
       cart.push({ label, price, qty: 1 });
     }
 
+    // Visual feedback
+    addToCartBtn.classList.add('clicked');
+    setTimeout(() => addToCartBtn.classList.remove('clicked'), 300);
+
     updateCartUI();
+    cartOverlay.classList.add('open');
   });
 
+  // Update Cart UI
   function updateCartUI() {
     cartItemsEl.innerHTML = '';
     let total = 0;
 
-    cart.forEach(item => {
+    cart.forEach((item, index) => {
       const li = document.createElement('li');
-      li.textContent = `${item.label} × ${item.qty} = $${(item.price * item.qty).toFixed(2)}`;
+
+      const itemInfo = document.createElement('div');
+      itemInfo.innerHTML = `<div>${item.label}<br>$${item.price.toFixed(2)} × ${item.qty}</div>`;
+
+      const actions = document.createElement('div');
+      actions.classList.add('cart-actions');
+      actions.innerHTML = `
+        <button onclick="changeQty(${index}, -1)">−</button>
+        <button onclick="changeQty(${index}, 1)">+</button>
+        <button onclick="removeItem(${index})">🗑️</button>
+      `;
+
+      li.appendChild(itemInfo);
+      li.appendChild(actions);
       cartItemsEl.appendChild(li);
+
       total += item.price * item.qty;
     });
 
     cartTotalEl.textContent = total.toFixed(2);
-  } 
+  }
+
+  // Quantity Change
+  window.changeQty = function(index, delta) {
+    cart[index].qty += delta;
+    if (cart[index].qty <= 0) {
+      cart.splice(index, 1);
+    }
+    updateCartUI();
+  };
+
+  // Remove Item
+  window.removeItem = function(index) {
+    cart.splice(index, 1);
+    updateCartUI();
+  };
+
+  // Checkout button
+  checkoutBtn.addEventListener('click', () => {
+    if (cart.length === 0) {
+      alert("Your cart is empty.");
+      return;
+    }
+
+    let emailBody = "Order Summary:%0D%0A";
+    cart.forEach(item => {
+      emailBody += `${item.label} × ${item.qty} = $${(item.price * item.qty).toFixed(2)}%0D%0A`;
+    });
+    const total = cart.reduce((sum, item) => sum + item.price * item.qty, 0);
+    emailBody += `%0D%0ATotal: $${total.toFixed(2)}`;
+
+    const mailtoLink = `mailto:bbdinnovation@gmail.com?subject=Dirt Daddy Order&body=${emailBody}`;
+    window.location.href = mailtoLink;
+  });
+    
   </script>
 </body>
 </html>
